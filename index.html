@@ -7,14 +7,17 @@
     <!-- <link href="src/css.css" rel="stylesheet" /> -->
     <script src="src/js.js"></script>
   </head>
-  <body class="bg-orange-50 text-slate-700">
+  <body class="bg-orange-50 text-teal-950">
     <div class="container mx-auto">
       <div class="relative">
         <div
           class="absolute top-4 mx-4 w-full rounded-sm bg-slate-50/50 p-4 backdrop-blur-xs"
         >
-          <div class="flex">
-            <div class="w-auto"><h1>ЛогоЛес</h1></div>
+          <div class="flex items-center">
+            <div class="w-auto">
+              <img src="img/logo.svg" alt="" class="w-12" />
+              <!-- <h1>ЛогоЛес</h1> -->
+            </div>
             <div class="w-full">
               <nav class="invisible flex justify-end gap-8 md:visible">
                 <a href="#Obomne">Обо мне</a>
@@ -57,7 +60,7 @@
       <section>
         <h2 class="mb-8" id="Uslugi">Услуги</h2>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="Card bg-teal-500 text-slate-50">
+          <div class="Card CardTeal">
             <h3 class="text-xl font-medium">Постановка звуков</h3>
             <div class="my-4">
               <p>
@@ -68,7 +71,7 @@
             </div>
             <button>Записаться</button>
           </div>
-          <div class="Card bg-orange-100 text-slate-700">
+          <div class="Card CardOrange">
             <h3 class="mb-2 text-xl font-medium">Постановка речи</h3>
             <div class="my-4">
               <p>
@@ -78,39 +81,39 @@
             </div>
             <button>Записаться</button>
           </div>
-          <div class="Card bg-teal-500 text-slate-50">
+          <div class="Card CardTeal">
             <h3 class="mb-2 text-xl font-medium">Скорочтение</h3>
             <p>
               Не следует, однако, забывать, что понимание сущности
               ресурсосберегающих технологий способствует повышению качества.
             </p>
           </div>
-          <div class="Card bg-orange-100 text-slate-700">
+          <div class="Card CardOrange">
             <h3 class="mb-2 text-xl font-medium">Обучение чтению</h3>
             <p>Прежде всего понимание сущности ресурсосберегающих.</p>
           </div>
-          <div class="Card bg-orange-100 text-slate-700">
+          <div class="Card CardOrange">
             <h3 class="mb-2 text-xl font-medium">Подготовка к школе</h3>
             <p>
               Прежде всего понимание сущности ресурсосберегающих технологий
               представляет собой интересный.
             </p>
           </div>
-          <div class="Card bg-teal-500 text-slate-50">
+          <div class="Card CardTeal">
             <h3 class="mb-2 text-xl font-medium">Коррекция заикания у детей</h3>
             <p>
               Не следует, однако, забывать, что понимание сущности
               ресурсосберегающих технологий способствует повышению качества.
             </p>
           </div>
-          <div class="Card bg-orange-100 text-slate-700">
+          <div class="Card CardOrange">
             <h3 class="mb-2 text-xl font-medium">Запуск речи</h3>
             <p>
               Задача организации, в особенности же курс на
               социально-ориентированный.
             </p>
           </div>
-          <div class="Card bg-teal-500 text-slate-50">
+          <div class="Card CardTeal">
             <h3 class="mb-2 text-xl font-medium">Развитие связной речи</h3>
             <p>
               Для современного мира управление и развитие структуры
@@ -121,14 +124,14 @@
       </section>
       <section>
         <h2 class="mb-8" id="Galereia">Галерея</h2>
-        <div class="grid grid-cols-3 gap-4 md:grid-cols-6">
+        <div class="grid cursor-pointer grid-cols-3 gap-4 md:grid-cols-6">
           <img src="img/square.jpg" alt="" />
           <img src="img/square.jpg" alt="" />
           <img src="img/square.jpg" alt="" />
           <img src="img/square.jpg" alt="" />
           <img src="img/square.jpg" alt="" />
           <div
-            class="flex items-center justify-center border-2 border-orange-200 p-4 font-medium text-orange-300 hover:border-orange-300 hover:text-orange-400"
+            class="flex items-center justify-center border-2 border-orange-200 p-4 font-medium text-orange-300 transition duration-300 ease-in-out hover:border-orange-300 hover:text-orange-400"
           >
             <a href="">Смотреть все</a>
           </div>
@@ -210,16 +213,16 @@
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div class="rounded-sm bg-orange-100 p-4 sm:p-8">
             <h1
-              class="text-4xl font-extrabold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+              class="sm:text-5x text-3xl font-extrabold tracking-tight text-gray-700"
             >
               Название
             </h1>
             <p
-              class="text-normal mt-2 text-lg font-medium text-gray-600 sm:text-2xl"
+              class="text-normal my-4 text-lg font-light text-gray-600 sm:text-xl"
             >
               Текст о деятельности, услугах, цели вебсайта
             </p>
-            <div class="mt-8 flex items-center text-gray-600">
+            <address>
               <svg viewBox="0 0 24 24">
                 <path
                   fill-rule="evenodd"
@@ -227,11 +230,9 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <div class="text-md ml-4 font-semibold tracking-wide">
-                Россия, Город, ул. Уличная, 00
-              </div>
-            </div>
-            <div class="mt-4 flex items-center text-gray-600">
+              <a href="">Россия, Город, ул. Уличная, 00 </a>
+            </address>
+            <address>
               <svg viewBox="0 0 24 24">
                 <path
                   fill-rule="evenodd"
@@ -245,8 +246,8 @@
               >
                 +7 000 000-00-00
               </a>
-            </div>
-            <div class="mt-2 flex items-center text-gray-600">
+            </address>
+            <address>
               <svg viewBox="0 0 24 24">
                 <path
                   d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"
@@ -261,8 +262,8 @@
               >
                 mail@mail.ru
               </a>
-            </div>
-            <div class="mt-2 flex items-center text-gray-600">
+            </address>
+            <address>
               <svg viewBox="0 0 143.66875 119.0625">
                 <g
                   transform="matrix(0.26458333,0,0,0.26458333,-50.006248,-79.639586)"
@@ -277,39 +278,39 @@
                 class="text-md ml-4 font-semibold tracking-wide"
                 >@name</a
               >
-            </div>
-            <div class="mt-2 flex items-center text-gray-600">
+            </address>
+            <address>
               <svg viewBox="0 0 201.25464 200.38421">
                 <path
                   d="m 102.78948,199.81239 c -19.750577,0 -28.929067,-2.88329 -44.883294,-14.41647 -10.09153,12.97482 -42.04806,23.11442 -43.44165,5.76659 0,-13.02288 -2.8833,-24.02746 -6.1510298,-36.0412 C 4.4210562,140.32039 6.248237e-6,123.83755 6.248237e-6,99.954253 6.248237e-6,42.913047 46.805496,3.741413e-8 102.26088,3.741413e-8 157.76432,3.741413e-8 201.25402,45.027469 201.25402,100.48284 c 0.1863,54.59781 -43.8672,99.0383 -98.46454,99.32955 z M 103.60642,49.304365 C 76.599553,47.910772 55.551496,66.604141 50.890166,95.917643 c -3.8444,24.267737 2.9794,53.821527 8.79405,55.359287 2.78719,0.67276 9.803207,-4.99773 14.176197,-9.37072 7.23097,4.99534 15.65137,7.99553 24.4119,8.69794 27.983557,1.34606 51.894437,-19.95792 53.773457,-47.91077 1.09385,-28.011977 -20.4519,-51.737945 -48.43937,-53.340956 z"
                 />
               </svg>
-              <div class="text-md ml-4 font-semibold tracking-wide">
+              <a href="" class="text-md ml-4 font-semibold tracking-wide">
                 +70000000000
-              </div>
-            </div>
+              </a>
+            </address>
           </div>
           <form class="mt-6 flex flex-col">
             <div class="flex flex-col">
               <label for="name" class="hidden">Имя</label>
               <input type="name" name="name" id="name" placeholder="Имя" />
             </div>
-
             <div class="flex flex-col">
               <label for="email" class="hidden">Email</label>
               <input type="email" name="email" id="email" placeholder="Email" />
             </div>
-
-            <textarea
-              name="text"
-              id="text"
-              rows="3"
-              placeholder="Сообщение"
-            ></textarea>
-
+            <div class="flex flex-col">
+              <label for="textarea" class="hidden">Сообщение</label>
+              <textarea
+                name="text"
+                id="text"
+                rows="3"
+                placeholder="Сообщение"
+              ></textarea>
+            </div>
             <button
               type="submit"
-              class="hover:bg-blue-dark rounded-sm bg-teal-500 px-6 py-3 font-bold text-white transition duration-300 ease-in-out hover:bg-teal-600 md:w-32"
+              class="w-full rounded-sm bg-teal-500 px-6 py-3 font-bold text-white transition duration-300 ease-in-out hover:bg-teal-600 md:w-32"
             >
               Отправить
             </button>
