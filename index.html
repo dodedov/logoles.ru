@@ -14,40 +14,6 @@
   <body class="bg-orange-50 text-teal-950">
     <div class="container mx-auto">
       <div class="relative -mt-18">
-        <!-- <div
-          class="absolute top-4 mx-4 flex items-center rounded-sm bg-slate-50/50 p-4 backdrop-blur-xs"
-        >
-          <div>
-            <img src="img/logo.svg" alt="" class="w-12" />
-          </div>
-          <div>
-            <nav class="invisible flex justify-end gap-8 md:visible">
-              <a href="#Obomne">Обо мне</a>
-              <a href="#Uslugi">Услуги</a>
-              <a href="#Galereia">Галерея</a>
-              <a href="#Otzyvy">Отзывы</a>
-              <a href="#Kontakty">Контакты</a>
-            </nav>
-          </div>
-          <div class="visible md:invisible">
-            <svg
-              class="h-6 w-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="M5 7h14M5 12h14M5 17h14"
-              />
-            </svg>
-          </div>
-        </div> -->
         <div
           class="sticky top-4 z-50 mx-4 flex items-center rounded-md bg-stone-50/50 px-4 py-4 backdrop-blur-xs md:px-8"
         >
@@ -174,9 +140,30 @@
                     >
                       Услуги
                     </button>
-                    <a href="#Galereia">Галерея</a>
-                    <a href="#Otzyvy">Отзывы</a>
-                    <a href="#Kontakty">Контакты</a>
+                    <button
+                      onclick="location.href='#Galereia';"
+                      type="button"
+                      command="close"
+                      commandfor="drawer"
+                    >
+                      Галерея
+                    </button>
+                    <button
+                      onclick="location.href='#Otzyvy';"
+                      type="button"
+                      command="close"
+                      commandfor="drawer"
+                    >
+                      Отзывы
+                    </button>
+                    <button
+                      onclick="location.href='#Kontakty';"
+                      type="button"
+                      command="close"
+                      commandfor="drawer"
+                    >
+                      Контакты
+                    </button>
                   </div>
                 </div>
               </div>
