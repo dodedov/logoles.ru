@@ -1,18 +1,29 @@
 {
-	"version": "2.0.0",
-	"tasks": [
+    "version": "2.0.0",
+    "tasks": [
         {
             "label": "Tailwind4 CLI. Запустить сборку",
             "type": "shell",
-            "command": "npx @tailwindcss/cli -i src\\input.css -o src\\output.css --watch",
-            "group": "build",
-            "problemMatcher": []
+            "command": "npx @tailwindcss/cli -i src\\input.css -o src\\css.css --watch",
+            "group": "build"
         },
         {
             "label": "Tailwind4 CLI. Минификация",
             "type": "shell",
             "command": "npx @tailwindcss/cli -i src\\input.css -o src\\css.css --minify",
             "group": "build"
+        },
+        {
+            "label": "Tailwind4. Установка плагина @tailwindcss/forms",
+            "type": "shell",
+            "command": "npm install -D @tailwindcss/forms; Copy-Item W:\\html\\TailwindCLI4\\ps\\cssforms.ps1; .\\cssforms.ps1; Remove-Item .\\cssforms.ps1; Write-Host 'Плагин tailwindcss/forms установлен' -ForegroundColor Black -BackgroundColor White",
+            "group": "none"
+        },
+        {
+            "label": "Tailwind4. Установка плагина @tailwindcss/typography",
+            "type": "shell",
+            "command": "npm install -D @tailwindcss/typography; Copy-Item W:\\html\\TailwindCLI4\\ps\\csstypography.ps1; .\\csstypography.ps1; Remove-Item .\\csstypography.ps1; Write-Host 'Плагин tailwindcss/typography установлен' -ForegroundColor Black -BackgroundColor White",
+            "group": "none"
         }
     ]
 }
