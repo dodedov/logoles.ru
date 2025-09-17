@@ -45,6 +45,7 @@ address svg {
     @apply h-5 w-5 sm:h-8 sm:w-8 fill-teal-500;
 }
 
-address a {
+address a,
+address span {
     @apply ml-4 font-medium tracking-wide text-gray-600 not-italic;
 }
