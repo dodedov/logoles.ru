@@ -192,67 +192,199 @@
       </el-dialog>
       <section>
         <h2 class="mb-8" id="Uslugi">Услуги</h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="Card CardTeal">
-            <h3 class="text-xl font-medium">Постановка звуков</h3>
-            <div class="my-4">
+        <div
+          x-data="{ open: false }"
+          class="relative z-10"
+          x-init="$watch('open', value => document.body.classList.toggle('overflow-hidden', value))"
+        >
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div class="Card CardTeal relative">
+              <h3 class="text-xl font-medium">Постановка звуков</h3>
               <p>
                 Не следует, однако, забывать, что понимание сущности
                 ресурсосберегающих технологий способствует повышению качества
                 поэтапного и последовательного развития общества.
               </p>
+              <button @click="open = true">Записаться</button>
             </div>
-            <button>Записаться</button>
-          </div>
-          <div class="Card CardOrange">
-            <h3 class="mb-2 text-xl font-medium">Постановка речи</h3>
-            <div class="my-4">
+            <div class="Card CardOrange relative">
+              <h3 class="mb-2 text-xl font-medium">Постановка речи</h3>
               <p>
                 Прежде всего понимание сущности ресурсосберегающих технологий
                 представляет собой интересный.
               </p>
+              <button @click="open = true">Записаться</button>
             </div>
-            <button>Записаться</button>
+            <div class="Card CardTeal relative">
+              <h3 class="mb-2 text-xl font-medium">Скорочтение</h3>
+              <p>
+                Не следует, однако, забывать, что понимание сущности
+                ресурсосберегающих технологий способствует повышению качества.
+              </p>
+              <button @click="open = true">Записаться</button>
+            </div>
+            <div class="Card CardOrange relative">
+              <h3 class="mb-2 text-xl font-medium">Обучение чтению</h3>
+              <p>Прежде всего понимание сущности ресурсосберегающих.</p>
+              <button @click="open = true">Записаться</button>
+            </div>
+            <div class="Card CardOrange relative">
+              <h3 class="mb-2 text-xl font-medium">Подготовка к школе</h3>
+              <p>
+                Прежде всего понимание сущности ресурсосберегающих технологий
+                представляет собой интересный.
+              </p>
+              <button @click="open = true">Записаться</button>
+            </div>
+            <div class="Card CardTeal relative">
+              <h3 class="mb-2 text-xl font-medium">
+                Коррекция заикания у детей
+              </h3>
+              <p>
+                Не следует, однако, забывать, что понимание сущности
+                ресурсосберегающих технологий способствует повышению качества.
+              </p>
+              <button @click="open = true">Записаться</button>
+            </div>
+            <div class="Card CardOrange relative">
+              <h3 class="mb-2 text-xl font-medium">Запуск речи</h3>
+              <p>
+                Задача организации, в особенности же курс на
+                социально-ориентированный.
+              </p>
+              <button @click="open = true">Записаться</button>
+            </div>
+            <div class="Card CardTeal relative">
+              <h3 class="mb-2 text-xl font-medium">Развитие связной речи</h3>
+              <p>
+                Для современного мира управление и развитие структуры
+                способствует.
+              </p>
+              <button @click="open = true">Записаться</button>
+            </div>
           </div>
-          <div class="Card CardTeal">
-            <h3 class="mb-2 text-xl font-medium">Скорочтение</h3>
-            <p>
-              Не следует, однако, забывать, что понимание сущности
-              ресурсосберегающих технологий способствует повышению качества.
-            </p>
-          </div>
-          <div class="Card CardOrange">
-            <h3 class="mb-2 text-xl font-medium">Обучение чтению</h3>
-            <p>Прежде всего понимание сущности ресурсосберегающих.</p>
-          </div>
-          <div class="Card CardOrange">
-            <h3 class="mb-2 text-xl font-medium">Подготовка к школе</h3>
-            <p>
-              Прежде всего понимание сущности ресурсосберегающих технологий
-              представляет собой интересный.
-            </p>
-          </div>
-          <div class="Card CardTeal">
-            <h3 class="mb-2 text-xl font-medium">Коррекция заикания у детей</h3>
-            <p>
-              Не следует, однако, забывать, что понимание сущности
-              ресурсосберегающих технологий способствует повышению качества.
-            </p>
-          </div>
-          <div class="Card CardOrange">
-            <h3 class="mb-2 text-xl font-medium">Запуск речи</h3>
-            <p>
-              Задача организации, в особенности же курс на
-              социально-ориентированный.
-            </p>
-          </div>
-          <div class="Card CardTeal">
-            <h3 class="mb-2 text-xl font-medium">Развитие связной речи</h3>
-            <p>
-              Для современного мира управление и развитие структуры
-              способствует.
-            </p>
-          </div>
+          <!-- Модальное окно + фон -->
+          <template x-if="open">
+            <div class="fixed inset-0 z-50 flex items-center justify-center">
+              <!-- Фон, реагирующий на клик -->
+              <div
+                class="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                @click="open = false"
+              ></div>
+              <!-- Модальное окно -->
+              <div
+                class="relative z-60 w-full max-w-lg rounded-xl bg-orange-50 p-4 text-teal-950 shadow-xl"
+              >
+                <button
+                  @click="open = false"
+                  class="absolute top-4 right-4 text-xl text-gray-400 hover:text-gray-600"
+                >
+                  &times;
+                </button>
+                <h2>Запись на услугу</h2>
+                <form @submit.prevent="open = false" class="space-y-4">
+                  <div x-data="{ selected: '' }" class="space-y-4">
+                    <div>
+                      <select
+                        id="topic"
+                        x-model="selected"
+                        class="!mb-0 w-full"
+                        required
+                      >
+                        <option value="">-- Выберите услугу --</option>
+                        <option value="Postanovka_zvukov">
+                          Постановка звуков
+                        </option>
+                        <option value="Postanovka_rechi">
+                          Постановка речи
+                        </option>
+                        <option value="Skorochtenie">Скорочтение</option>
+                      </select>
+                    </div>
+                    <!-- Динамический блок -->
+                    <div
+                      x-show="selected === 'Postanovka_zvukov'"
+                      x-transition
+                      class="rounded-md border border-teal-500 bg-gray-50 p-4"
+                    >
+                      Стоимость занятий от 800₽/Время занятий 45 минут
+                    </div>
+                    <div
+                      x-show="selected === 'Postanovka_rechi'"
+                      x-transition
+                      class="rounded-md border border-teal-500 bg-gray-50 p-4"
+                    >
+                      Стоимость занятий от 800₽/Время занятий 45 минут
+                    </div>
+                    <div
+                      x-show="selected === 'Skorochtenie'"
+                      x-transition
+                      class="rounded-md border border-teal-500 bg-gray-50 p-4"
+                    >
+                      Стоимость занятий от 800₽/Время занятий 45 минут
+                    </div>
+                  </div>
+                  <div x-data="{ selected: '' }" class="space-y-4">
+                    <div>
+                      <select
+                        id="topic"
+                        x-model="selected"
+                        class="!mb-0 w-full"
+                        required
+                      >
+                        <option value="">-- Выберите формат занятий --</option>
+                        <option value="Oflain">Офлайн</option>
+                        <option value="Onlain">Онлайн</option>
+                      </select>
+                    </div>
+                    <!-- Динамический блок -->
+                    <div
+                      x-show="selected === 'Oflain'"
+                      x-transition
+                      class="rounded-md border border-teal-500 bg-gray-50 p-4"
+                    >
+                      Описание Офлайн занятия
+                    </div>
+                    <div
+                      x-show="selected === 'Onlain'"
+                      x-transition
+                      class="rounded-md border border-teal-500 bg-gray-50 p-4"
+                    >
+                      Описание Онлайн занятия
+                    </div>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="Имя"
+                      class="focus:ring-brand-light w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      id="tel"
+                      name="tel"
+                      required
+                      placeholder="Телефон"
+                      class="focus:ring-brand-light w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:outline-none"
+                    />
+                  </div>
+                  <div class="text-right">
+                    <button
+                      type="submit"
+                      class="w-full rounded-sm bg-teal-500 px-6 py-3 font-bold text-white transition duration-300 ease-in-out hover:bg-teal-600 md:w-32"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </template>
         </div>
       </section>
       <section>
@@ -290,7 +422,7 @@
             @click="$lightbox.open(images[2], 'kittens')"
             type="button"
           >
-            Смотреть все
+            Еще
           </button>
         </div>
         <div
